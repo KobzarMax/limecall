@@ -12,6 +12,32 @@
   --color-title: #565656;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+.time-list::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+.time-list::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.time-list::-webkit-scrollbar-thumb {
+  background: #e5e5e5; 
+}
+
+/* Handle on hover */
+.time-list::-webkit-scrollbar-thumb:hover {
+  background: #e5e5e5; 
+}
+
 p {
   margin: 0;
 }
@@ -63,7 +89,7 @@ p {
   color: var(--color-title);
   font-weight: 600;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .main {
@@ -111,7 +137,7 @@ p {
   gap: 3px;
 }
 .footer {
-  padding: 18px;
+  padding: 0 0 18px;
 }
 
 .call-type {
@@ -169,7 +195,7 @@ label {
   width: 100%;
   background-color: var(--color-white);
 }
-.options-list {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -216,3 +242,208 @@ label {
 .btn-primary:active, .btn-primary:focus {
   outline: none;
 }
+
+.calendar {
+  width: 100%;
+}
+.month {
+  font-size: 14px;
+  line-height: 16px;
+}
+.days-list, .dates-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 12px;
+}
+.days-item {
+  font-size: 12px;
+  line-height: 14px;
+  color: #6E7781;
+}
+.dates-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #262D33;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.dates-item.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.avaliable-time {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #F0EFEF;
+}
+#pick-time .main {
+  padding: 0;
+}
+#pick-time .calendar {
+  padding: 24px 24px 0;
+  width: 100%;
+}
+.time-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+.time-list {
+  height: 140px;
+  overflow-y: scroll
+}
+.time-item {
+  padding: 19px 24px;
+  background-color: var(--color-white);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#more-info input, textarea {
+  width: 100%;
+  border: 4px solid var(--color-black);
+  border-radius: 6px;
+  outline: none;
+  padding: 8px 16px;
+}
+.select-industry {
+  width: 100%;
+  position: relative;
+}
+.select-industry p {
+  width: 100%;
+  border: 4px solid var(--color-black);
+  border-radius: 6px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.industies-list {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+}
+.industy-item {
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.industy-item:hover {
+ background-color: var(--color-primary);
+}
+.industy-item:first-child {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.industy-item:last-child {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#more-info .main-text {
+  font-weight: 500;
+}
+#more-info .main {
+  gap: 10px;
+}
+.main-subtext {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 300;
+  color: var(--color-primary);
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+#confirmation .main {
+  gap: 14px;
+  padding: 24px 18px;
+}
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 14px;
+}
+.info-name, .info-value {
+  white-space: nowrap;
+}
+.info-name {
+  font-weight: 500;
+}
+
+.avaliale-title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+.avaliable-subtitle {
+  color: #929292;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  cursor: pointer;
+}
+
+@media (max-width: 572px) {
+  #root {
+    min-height: 100vh;
+  }
+  .popup-content {
+    width: 100vw;
+    left: 0;
+    height: 100vh;
+    grid-template-rows: min-content 1fr max-content;
+  }
+  .popup-header {
+    margin-top: 40px;
+  }
+  .time-list {
+    height: 450px;
+  }
+  #more-info input, textarea {
+    padding: 14px 16px;
+  }
+  .select-industry p {
+    padding: 14px 16px;
+  }
+}
+

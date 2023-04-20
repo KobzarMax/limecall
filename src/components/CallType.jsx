@@ -4,12 +4,12 @@ import { Footer } from "./Footer";
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 
-export const CallType = ({action}) => {
+export const CallType = ({action, close_all}) => {
 
 
     return (
         <div className="popup-content">
-            <Header title="Pick call type" />
+            <Header close={close_all}  title="Pick call type" />
             <div className="main">
                 <button className="btn call-type">
                     <PhoneInTalkIcon /> Call me here

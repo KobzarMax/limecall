@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-export const EnterPhone = ({action}) => {
+export const EnterPhone = ({action, close_all}) => {
 
     const options = ['+1', '+20', '+91', '+972'];
 
@@ -25,7 +25,7 @@ export const EnterPhone = ({action}) => {
 
     return (
         <div className="popup-content">
-            <Header title="Enter phone number" />
+            <Header close={close_all} title="Enter phone number" />
             <div className="main">
                 <p className="main-text">
                     Please provide your mobile phone number to confirm your appointment booking.
