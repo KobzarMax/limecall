@@ -111,10 +111,13 @@ p {
 }
 
 .btn:hover {
-  border-bottom: 4px solid var(--color-black);
+  /* border-bottom: 4px solid var(--color-black);
   border-top: 4px solid var(--color-white);
   border-left: 4px solid var(--color-white);
-  border-right: 4px solid var(--color-white);
+  border-right: 4px solid var(--color-white); */
+  border: 0px solid var(--color-black);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   outline: none;
 }
 .btn:active {
@@ -238,9 +241,15 @@ ul {
   line-height: 22px;
   outline: none;
   border: none;
+  transition: 0.3s all;
 }
 .btn-primary:active, .btn-primary:focus {
   outline: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 .calendar {

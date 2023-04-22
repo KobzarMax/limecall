@@ -49,7 +49,7 @@ export const EnterPhone = ({action, close_all}) => {
                                     </div>
                                 }
                             </div>
-                            <input type="phone" className="input" placeholder="Your phone number" />
+                            <input type="tel" className="input" placeholder="Your phone number" />
                         </div>
                     </label>
                 </div>
