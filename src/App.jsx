@@ -51,7 +51,6 @@ function App() {
     setMoreInfoView(false);
     setPickTimeView(false);
     setSpeakWithView(true);
-
   }
 
   const togglePickTime = () => {
@@ -86,7 +85,7 @@ function App() {
       <button className='open-app' onClick={toggleAppView}>
         {appView && <ArrowBackIosNewIcon /> || <CallIcon /> }
       </button>
-      {callTypeView && <CallType close_all={toggleAppView} action={toggleEnterPhone} />}
+      {callTypeView && <CallType close_all={toggleAppView} action={toggleEnterPhone} call_back={toggleEnterPhone} call_now={toggleSpeakWith} more_info={toggleMoreInfo} />}
       {enterPhoveView && <EnterPhone close_all={toggleAppView} action={toggleSpeakWith} />}
       {speakWithView && <SpeakWith close_all={toggleAppView} action={togglePickTime} back={toggleSpeakWith} />}
       {pickTimeView && <PickTime close_all={toggleAppView} action={toggleMoreInfo} />}

@@ -146,8 +146,8 @@ p {
 .call-type {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 37px;
+  justify-content: flex-start;
+  gap: 16px;
 }
 .call-type svg {
   transform: rotate(360deg);
